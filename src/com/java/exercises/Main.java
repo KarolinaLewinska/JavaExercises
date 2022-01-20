@@ -2,6 +2,7 @@ package com.java.exercises;
 
 import com.java.exercises.methods.Methods;
 import com.java.exercises.objects.Human;
+import com.java.exercises.objects.MyNumber;
 import com.java.exercises.objects.Rectangle;
 
 import java.math.BigDecimal;
@@ -27,5 +28,14 @@ public class Main {
         rectangle.countRectangleArea();
         rectangle.countRectanglePerimeter();
         rectangle.countRectangleDiagonalLength();
+
+        MyNumber firstNumber = new MyNumber(50.0);
+        MyNumber secondNumber = new MyNumber(25.0);
+        firstNumber.isOdd();
+        firstNumber.isEven();
+        firstNumber.countRoot();
+        firstNumber.countPow(2);
+        firstNumber.add(secondNumber);
+        firstNumber.substract(secondNumber);
     }
 }
