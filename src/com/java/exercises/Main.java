@@ -1,5 +1,6 @@
 package com.java.exercises;
 
+import com.java.exercises.loops.ArrayFactory;
 import com.java.exercises.loops.Loop;
 import com.java.exercises.methods.Methods;
 import com.java.exercises.objects.Human;
@@ -47,5 +48,8 @@ public class Main {
 
         //package loops
         Loop.showNumbersRange(20);
+        ArrayFactory arrayFactory = new ArrayFactory(30);
+        arrayFactory.createOneDimensionTable();
+        arrayFactory.createTwoDimensionTable();
     }
 }
