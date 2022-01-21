@@ -1,9 +1,11 @@
 package com.java.exercises;
 
+import com.java.exercises.loops.Loop;
 import com.java.exercises.methods.Methods;
 import com.java.exercises.objects.Human;
 import com.java.exercises.objects.MyNumber;
 import com.java.exercises.objects.Rectangle;
+import com.java.exercises.tables.Table;
 
 import java.math.BigDecimal;
 
@@ -37,5 +39,13 @@ public class Main {
         firstNumber.countPow(2);
         firstNumber.add(secondNumber);
         firstNumber.substract(secondNumber);
+
+        //package tables
+        Integer[] table = {1,2,3};
+        Table.getLetters();
+        Table.getReversedTable(table);
+
+        //package loops
+        Loop.showNumbersRange(20);
     }
 }
