@@ -48,6 +48,7 @@ public class Main {
 
         //package loops
         Loop.showNumbersRange(20);
+        Loop.printReversedNumber(123456);
         ArrayFactory arrayFactory = new ArrayFactory(30);
         arrayFactory.createOneDimensionTable();
         arrayFactory.createTwoDimensionTable();
