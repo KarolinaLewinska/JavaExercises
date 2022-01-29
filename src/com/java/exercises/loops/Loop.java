@@ -33,4 +33,18 @@ public class Loop {
             System.out.println(reversedText);
         }
     }
+
+    public static int convertToBinary(int number) {
+       int dividedNumber = number;
+       int restOfDivision;
+       String numberToText = "";
+       do {
+           restOfDivision = dividedNumber % 2;
+           dividedNumber = dividedNumber / 2;
+           System.out.println(restOfDivision);
+           numberToText = restOfDivision + numberToText;
+       } while (dividedNumber > 0);
+       System.out.println("Binary value of " + number + " equals " + numberToText);
+       return Integer.parseInt(numberToText);
+    }
 }
