@@ -24,4 +24,13 @@ public class Loop {
             System.out.println(textValue.charAt(textValue.length() - 1 - i));
         }
     }
+
+    public static void printReversedText(String text) {
+        String reversedText = "";
+        for (int i=0; i < text.length(); i++) {
+            char letter = text.charAt(i);
+            reversedText = letter + reversedText;
+            System.out.println(reversedText);
+        }
+    }
 }

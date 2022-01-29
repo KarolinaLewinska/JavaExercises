@@ -49,6 +49,7 @@ public class Main {
         //package loops
         Loop.showNumbersRange(20);
         Loop.printReversedNumber(123456);
+        Loop.printReversedText("dog");
         ArrayFactory arrayFactory = new ArrayFactory(30);
         arrayFactory.createOneDimensionTable();
         arrayFactory.createTwoDimensionTable();
