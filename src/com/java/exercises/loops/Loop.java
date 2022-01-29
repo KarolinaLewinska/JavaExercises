@@ -47,4 +47,16 @@ public class Loop {
        System.out.println("Binary value of " + number + " equals " + numberToText);
        return Integer.parseInt(numberToText);
     }
+
+    public static boolean isPalindrome(String text) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(text);
+        String reversedText = stringBuilder.reverse().toString();
+        if (text.equals(reversedText)) {
+            System.out.println("Word " + text + " is a palindrome");
+            return true;
+        }
+        System.out.println("Word " + text + " is not a palindrome");
+        return false;
+    }
 }

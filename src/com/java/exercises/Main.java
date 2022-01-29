@@ -51,6 +51,7 @@ public class Main {
         Loop.printReversedNumber(123456);
         Loop.printReversedText("dog");
         Loop.convertToBinary(21);
+        Loop.isPalindrome("level");
         ArrayFactory arrayFactory = new ArrayFactory(30);
         arrayFactory.createOneDimensionTable();
         arrayFactory.createTwoDimensionTable();
