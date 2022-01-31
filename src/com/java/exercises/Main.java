@@ -55,5 +55,6 @@ public class Main {
         ArrayFactory arrayFactory = new ArrayFactory(30);
         arrayFactory.createOneDimensionTable();
         arrayFactory.createTwoDimensionTable();
+        arrayFactory.createIdentityMatrix();
     }
 }
