@@ -59,4 +59,17 @@ public class Loop {
         System.out.println("Word " + text + " is not a palindrome");
         return false;
     }
+
+    public static void printIntegerTable(int[] numbersTable) {
+        System.out.print("[");
+        for (int i=0; i < numbersTable.length; i++) {
+            if (i == numbersTable.length-1) {
+                System.out.print(numbersTable[i]);
+            } else {
+                System.out.print(numbersTable[i] + ", ");
+            }
+        }
+        System.out.print("]");
+        System.out.println();
+    }
 }
