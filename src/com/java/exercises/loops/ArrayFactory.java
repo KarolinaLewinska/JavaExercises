@@ -33,7 +33,7 @@ public class ArrayFactory {
             for (int j=0; j < size; j++) {
                 System.out.print(matrix[i][j]);
             }
-            System.out.println("\n");
+            System.out.println();
         }
         return matrix;
     }
