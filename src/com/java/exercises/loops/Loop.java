@@ -20,14 +20,14 @@ public class Loop {
 
     public static void printReversedNumber(int number) {
         String textValue = String.valueOf(number);
-        for (int i=0; i < textValue.length(); i++) {
+        for (int i = 0; i < textValue.length(); i++) {
             System.out.println(textValue.charAt(textValue.length() - 1 - i));
         }
     }
 
     public static void printReversedText(String text) {
         String reversedText = "";
-        for (int i=0; i < text.length(); i++) {
+        for (int i = 0; i < text.length(); i++) {
             char letter = text.charAt(i);
             reversedText = letter + reversedText;
             System.out.println(reversedText);
@@ -37,15 +37,15 @@ public class Loop {
     public static int convertToBinary(int number) {
        int dividedNumber = number;
        int restOfDivision;
-       String numberToText = "";
+       StringBuilder numberToText = new StringBuilder();
        do {
            restOfDivision = dividedNumber % 2;
            dividedNumber = dividedNumber / 2;
            System.out.println(restOfDivision);
-           numberToText = restOfDivision + numberToText;
+           numberToText.insert(0, restOfDivision);
        } while (dividedNumber > 0);
        System.out.println("Binary value of " + number + " equals " + numberToText);
-       return Integer.parseInt(numberToText);
+       return Integer.parseInt(numberToText.toString());
     }
 
     public static boolean isPalindrome(String text) {
@@ -62,7 +62,7 @@ public class Loop {
 
     public static void printIntegerTable(int[] numbersTable) {
         System.out.print("[");
-        for (int i=0; i < numbersTable.length; i++) {
+        for (int i = 0; i < numbersTable.length; i++) {
             if (i == numbersTable.length-1) {
                 System.out.print(numbersTable[i]);
             } else {
@@ -71,5 +71,23 @@ public class Loop {
         }
         System.out.print("]");
         System.out.println();
+    }
+
+    public static int[] sortTableByBubbleSort(int[] numbersTable) {
+        for (int i = 0; i < numbersTable.length - 1; i++) {
+            for (int j = 0; j < numbersTable.length - 1; j++) {
+                if (numbersTable[j] > numbersTable[j + 1]) {
+                    int temp = numbersTable[j];
+                    numbersTable[j] = numbersTable[j + 1];
+                    numbersTable[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("Values of sorted table: ");
+        for (int i : numbersTable) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        return numbersTable;
     }
 }
