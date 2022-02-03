@@ -2,12 +2,12 @@ package com.java.exercises.objects;
 
 public class Human {
     String name;
-    int age;
-    float weight;
-    int height;
+    Integer age;
+    Float weight;
+    Integer height;
     String gender;
 
-    public Human(String name, int age, float weight, int height, String gender) {
+    public Human(String name, Integer age, Float weight, Integer height, String gender) {
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -19,19 +19,19 @@ public class Human {
         return name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public float getWeight() {
+    public Float getWeight() {
         return weight;
     }
 
-    public int getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
-    public boolean isMale() {
+    public Boolean isMale() {
         if (gender.equals("Man")) {
             System.out.println("Gender is man");
             return true;

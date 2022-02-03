@@ -55,6 +55,7 @@ public class Main {
         int[] numbersTable = {11,2,34,4,5,66,7,8,9};
         Loop.printIntegerTable(numbersTable);
         Loop.sortTableByBubbleSort(numbersTable);
+        Loop.showBinaryNumber();
         ArrayFactory arrayFactory = new ArrayFactory(30);
         arrayFactory.createOneDimensionTable();
         arrayFactory.createTwoDimensionTable();

@@ -1,5 +1,7 @@
 package com.java.exercises.loops;
 
+import java.util.Scanner;
+
 public class Loop {
     public static void showNumbersRange(int maxValue) {
         if (maxValue <= 0)  {
@@ -41,7 +43,6 @@ public class Loop {
        do {
            restOfDivision = dividedNumber % 2;
            dividedNumber = dividedNumber / 2;
-           System.out.println(restOfDivision);
            numberToText.insert(0, restOfDivision);
        } while (dividedNumber > 0);
        System.out.println("Binary value of " + number + " equals " + numberToText);
@@ -89,5 +90,17 @@ public class Loop {
         }
         System.out.println();
         return numbersTable;
+    }
+
+    public static void showBinaryNumber() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Type a number to convert");
+        try {
+            int userNumber = Integer.parseInt(scanner.nextLine());
+            convertToBinary(userNumber);
+        }
+        catch (NumberFormatException exc) {
+            System.out.println("Only natural numbers are allowed! Try again!");
+        }
     }
 }
