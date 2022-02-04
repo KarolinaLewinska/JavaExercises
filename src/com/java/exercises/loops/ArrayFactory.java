@@ -1,5 +1,10 @@
 package com.java.exercises.loops;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class ArrayFactory {
     int size;
 
@@ -36,5 +41,13 @@ public class ArrayFactory {
             System.out.println();
         }
         return matrix;
+    }
+
+    public void createAndSortList(int[] numbersToAdd) {
+        Integer[] convertedTable = Arrays.stream(numbersToAdd).boxed().toArray(Integer[]::new);
+        List<Integer> numbersList = new ArrayList<>(size);
+        numbersList.addAll(Arrays.stream(convertedTable).toList());
+        Collections.sort(numbersList);
+        numbersList.forEach(System.out::println);
     }
 }

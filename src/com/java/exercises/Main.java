@@ -60,5 +60,6 @@ public class Main {
         arrayFactory.createOneDimensionTable();
         arrayFactory.createTwoDimensionTable();
         arrayFactory.createIdentityMatrix();
+        arrayFactory.createAndSortList(numbersTable);
     }
 }
