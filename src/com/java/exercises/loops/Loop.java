@@ -32,8 +32,8 @@ public class Loop {
         for (int i = 0; i < text.length(); i++) {
             char letter = text.charAt(i);
             reversedText = letter + reversedText;
-            System.out.println(reversedText);
         }
+        System.out.println(reversedText);
     }
 
     public static int convertToBinary(int number) {
@@ -102,5 +102,11 @@ public class Loop {
         catch (NumberFormatException exc) {
             System.out.println("Only natural numbers are allowed! Try again!");
         }
+    }
+
+    public static void showWordInfo(String word) {
+        System.out.println("The length of word: " + word + " equals: " + word.length());
+        isPalindrome(word);
+        printReversedText(word);
     }
 }

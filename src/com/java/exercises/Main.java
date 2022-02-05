@@ -56,6 +56,7 @@ public class Main {
         Loop.printIntegerTable(numbersTable);
         Loop.sortTableByBubbleSort(numbersTable);
         Loop.showBinaryNumber();
+        Loop.showWordInfo("Karolina");
         ArrayFactory arrayFactory = new ArrayFactory(30);
         arrayFactory.createOneDimensionTable();
         arrayFactory.createTwoDimensionTable();
