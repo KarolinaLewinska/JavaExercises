@@ -1,14 +1,18 @@
 package com.java.exercises;
 
+import com.java.exercises.figures.Circle;
+import com.java.exercises.figures.RightTriangle;
+import com.java.exercises.interfaces.Figure;
 import com.java.exercises.loops.ArrayFactory;
 import com.java.exercises.loops.Loop;
 import com.java.exercises.methods.Methods;
 import com.java.exercises.objects.Human;
 import com.java.exercises.objects.MyNumber;
-import com.java.exercises.objects.Rectangle;
+import com.java.exercises.figures.Rectangle;
 import com.java.exercises.tables.Table;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class Main {
 
@@ -28,9 +32,9 @@ public class Main {
         human.printData();
 
         Rectangle rectangle = new Rectangle(20.0, 20.0);
-        rectangle.countRectangleArea();
-        rectangle.countRectanglePerimeter();
-        rectangle.countRectangleDiagonalLength();
+        rectangle.getArea();
+        rectangle.getPerimeter();
+        rectangle.getRectangleDiagonalLength();
 
         MyNumber firstNumber = new MyNumber(50.0);
         MyNumber secondNumber = new MyNumber(25.0);
@@ -62,5 +66,20 @@ public class Main {
         arrayFactory.createTwoDimensionTable();
         arrayFactory.createIdentityMatrix();
         arrayFactory.createAndSortList(numbersTable);
+
+        //package figures
+        Scanner scanner = new Scanner(System.in);
+        Figure[] figures = new Figure[3];
+        System.out.println("Type radiatus' length of a triangle");
+        figures[0] = new Circle(scanner.nextDouble());
+        System.out.println("Type sides' lengths of rectangle");
+        figures[1] = new Rectangle(scanner.nextDouble(), scanner.nextDouble());
+        System.out.println("Type cathetuses' lengths of right triangle");
+        figures[2] = new RightTriangle(scanner.nextDouble(), scanner.nextDouble());
+
+        for (Figure figure : figures) {
+            System.out.println(figure.getArea());
+            System.out.println(figure.getPerimeter());
+        }
     }
 }
